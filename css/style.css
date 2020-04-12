@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
 
-html body{
-  height:100vh;
-}
 * {
     margin: 0;
     font-family:'Comic Neue', cursive;
+}
+
+html body{
+  height:100vh;
 }
 
 .sidebar{
   grid-area: sidebar;
   background-color:red;
 }
+
 header {
   background-color: cyan;
   grid-area: head;
 }
-
 
 main {
   background-color: white;
