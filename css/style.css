@@ -1,21 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
 
+html body{
+  height:100vh;
+}
 * {
     margin: 0;
     font-family:'Comic Neue', cursive;
 }
 
-h2{
-    text-align: center;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    position: relative;
+.sidebar{
+  grid-area: sidebar;
+  background-color:red;
+}
+header {
+  background-color: cyan;
+  grid-area: head;
+}
 
+
+main {
+  background-color: white;
+  grid-area: main;
 }
-html body{
-    height:100vh;
+
+footer {
+  background-color: rgb(34, 33, 33);
+  grid-area: foot;
 }
+
 #page {
     display: grid;
     height: 100vh;
@@ -30,25 +42,14 @@ html body{
 
 }
   
-  .sidebar{
-    grid-area: sidebar;
-    background-color:red;
-  }
-  header {
-    background-color: cyan;
-    grid-area: head;
-  }
-  
-  
-  main {
-    background-color: white;
-    grid-area: main;
-  }
-  
-  footer {
-    background-color: rgb(34, 33, 33);
-    grid-column: foot;
-  }
+  h2{
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+
+}
   @media (max-width:600px){
       #page{
         display: grid;
