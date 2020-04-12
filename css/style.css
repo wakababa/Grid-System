@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
+
+* {
+    margin: 0;
+    font-family:'Comic Neue', cursive;
+}
+
+h2{
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+
+}
+html body{
+    height:100vh;
+}
+#page {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:  repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    background:rgb(170, 170, 170);
+    grid-template-areas: 
+     "head head head head head head head head head"
+     "sidebar sidebar main  main main main main main main"
+     "sidebar sidebar foot foot foot foot foot foot foot";
+
+}
+  
+  .sidebar{
+    grid-area: sidebar;
+    background-color:red;
+  }
+  header {
+    background-color: cyan;
+    grid-area: head;
+  }
+  
+  
+  main {
+    background-color: white;
+    grid-area: main;
+  }
+  
+  footer {
+    background-color: rgb(34, 33, 33);
+    grid-column: foot;
+  }
+  @media (max-width:600px){
+      #page{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+         "head"
+         "sidebar"
+         "main"
+         "foot"; 
+      }
+  }
